@@ -9,16 +9,17 @@ private void loadBooksFromDatabase() {
             public void onResponse(JSONArray response) {
                 try {
                     List<Book> bookList = new ArrayList<>();
-                    for (int i = 0; i <= response.length(); i++) {
+                    for (int i = 0; i < response.length(); i++) {
                         JSONObject obj = response.getJSONObject(i);
                         bookList.add(new Book(
                             obj.getInt("id"),
                             obj.getInt("major_id"),
-                            obj.getString("book"),
+                            obj.getString("book_name"),
                             obj.getString("author"),
-                            obj.getString("edition")
+                            obj.optString("edition", "")
                         ));
                     }
+                    buildBooksSection(bookList);
                 } catch (Exception e) {
                     addText("Error loading books.", "#999999");
                 }
@@ -27,6 +28,7 @@ private void loadBooksFromDatabase() {
         new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                addText("Books not available.", "#999999");
             }
         }
     );
