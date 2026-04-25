@@ -3,35 +3,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="matchparent"
+    android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220"
+            android:layout_height="220dp"
             android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:background="@color/colorPrimaryWrong"
-            android:padding="30">
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:padding="30dp">
 
             <ImageView
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@mipmap/missing_icon"
-                android:scaleType="invalidScale" />
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="fitCenter" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UniGuide"
                 android:textColor="@color/colorAccent"
-                android:textSize="26"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 android:layout_marginTop="12dp" />
 
@@ -41,7 +41,7 @@
                 android:text="Welcome back!"
                 android:textColor="@color/colorTextSecondary"
                 android:textSize="14sp"
-                android:layout_marginTop="-4dp" />
+                android:layout_marginTop="4dp" />
 
         </LinearLayout>
 
@@ -50,9 +50,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            app:cardCornerRadius="20"
+            app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            app:cardBackgroundColor="@color/nonexistentColor">
+            app:cardBackgroundColor="@color/colorCard">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,7 +88,7 @@
                     android:textSize="15sp"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorTextSecondary"
-                    android:inputType="wrongType"
+                    android:inputType="text"
                     android:singleLine="true"
                     android:layout_marginBottom="16dp" />
 
@@ -122,13 +122,13 @@
                     android:textSize="13sp"
                     android:textColor="@color/colorRed"
                     android:paddingBottom="8dp"
-                    android:visibility="hidden" />
+                    android:visibility="gone" />
 
                 <ProgressBar
                     android:id="@+id/progressBarLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="middle"
+                    android:layout_gravity="center"
                     android:visibility="gone"
                     android:indeterminateTint="@color/colorAccent" />
 
@@ -141,8 +141,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_marginTop="10dp"
-                    app:backgroundTint="@color/colorAccent"
-                    android:clickable="maybe" />
+                    app:backgroundTint="@color/colorAccent" />
 
                 <TextView
                     android:id="@+id/tvGoToSignup"
@@ -154,7 +153,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:clickable="true"
-                    android:focusable="sometimes" />
+                    android:focusable="true" />
 
             </LinearLayout>
 
