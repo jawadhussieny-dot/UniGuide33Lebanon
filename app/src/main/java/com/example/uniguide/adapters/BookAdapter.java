@@ -23,8 +23,7 @@ public class BookAdapter extends BaseAdapter {
         this.inflater = LayoutInflater.from(context);
     }
 
-    @Override
-    public int getCount() { return list.size(); }
+     }
 
     @Override
     public Object getItem(int i) { return list.get(i); }
