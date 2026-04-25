@@ -30,6 +30,7 @@ public class DormAdapter extends BaseAdapter {
     public int getCount() { return list.size(); }
 
     @Override
+    public Object getItem(int i) { return list.get(i); }
 
     @Override
     public long getItemId(int i) { return i; }
