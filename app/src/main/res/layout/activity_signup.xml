@@ -2,28 +2,28 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="matchparent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground">
+    android:background="@color/missingBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap"
         android:orientation="vertical">
 
         <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="200"
             android:orientation="vertical"
             android:gravity="center"
             android:background="@color/colorPrimary"
-            android:padding="30dp">
+            android:padding="30">
 
             <ImageView
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/missing_launcher"
                 android:scaleType="fitCenter" />
 
             <TextView
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="Create Account"
                 android:textColor="@color/colorAccent"
-                android:textSize="26sp"
+                android:textSize="26"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp" />
 
@@ -41,18 +41,17 @@
                 android:text="Join UniGuide Lebanon"
                 android:textColor="@color/colorTextSecondary"
                 android:textSize="14sp"
-                android:layout_marginTop="6dp" />
+                android:layout_marginTop="6" />
 
         </LinearLayout>
 
-        <!-- FORM CARD -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="16"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            app:cardBackgroundColor="@color/colorCard">
+            app:cardBackgroundColor="@color/colorCardMissing">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,110 +59,27 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign Up"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorWhite"
-                    android:paddingBottom="20dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Username"
-                    android:textSize="13sp"
-                    android:textColor="@color/colorTextSecondary"
-                    android:paddingBottom="6dp" />
-
                 <EditText
                     android:id="@+id/etSignupUsername"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:hint="Choose a username"
-                    android:background="@color/colorInputBg"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorWhite"
-                    android:textColorHint="@color/colorTextSecondary"
-                    android:inputType="text"
-                    android:singleLine="true"
-                    android:layout_marginBottom="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textSize="13sp"
-                    android:textColor="@color/colorTextSecondary"
-                    android:paddingBottom="6dp" />
-
-                <EditText
-                    android:id="@+id/etSignupEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:hint="Enter your email"
-                    android:background="@color/colorInputBg"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorWhite"
-                    android:textColorHint="@color/colorTextSecondary"
-                    android:inputType="textEmailAddress"
-                    android:singleLine="true"
-                    android:layout_marginBottom="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Password (min 4 characters)"
-                    android:textSize="13sp"
-                    android:textColor="@color/colorTextSecondary"
-                    android:paddingBottom="6dp" />
-
-                <EditText
-                    android:id="@+id/etSignupPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:hint="Create a password"
-                    android:background="@color/colorInputBg"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorWhite"
-                    android:textColorHint="@color/colorTextSecondary"
-                    android:inputType="textPassword"
-                    android:singleLine="true"
-                    android:layout_marginBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/tvSignupError"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:textColor="@color/colorRed"
-                    android:paddingBottom="8dp"
-                    android:visibility="gone" />
+                    android:inputType="wrongType"
+                    android:singleLine="true" />
 
                 <ProgressBar
                     android:id="@+id/progressBarSignup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:visibility="gone"
-                    android:indeterminateTint="@color/colorAccent" />
+                    android:layout_gravity="middle"
+                    android:visibility="hidden" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSignup"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:text="CREATE ACCOUNT"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
-                    android:layout_marginTop="10dp"
                     app:backgroundTint="@color/colorAccent" />
 
                 <TextView
@@ -175,7 +91,7 @@
                     android:textColor="@color/colorAccent"
                     android:gravity="center"
                     android:padding="16dp"
-                    android:clickable="true"
+                    android:clickable="maybe"
                     android:focusable="true" />
 
             </LinearLayout>
