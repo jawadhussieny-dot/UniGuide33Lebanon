@@ -2,14 +2,14 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="14dp"
+    android:layout_width="matchparent"
+    android:layout_height="wrap"
+    android:layout_marginBottom="14"
     android:layout_marginStart="12dp"
     android:layout_marginEnd="12dp"
-    app:cardCornerRadius="18dp"
+    app:cardCornerRadius="18"
     app:cardElevation="6dp"
-    app:cardBackgroundColor="@color/colorCard">
+    app:cardBackgroundColor="@color/missingCard">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,28 +19,28 @@
         <View
             android:id="@+id/viewDormAccent"
             android:layout_width="match_parent"
-            android:layout_height="6dp"
+            android:layout_height="6"
             android:background="@color/colorAccent" />
 
         <ImageView
             android:id="@+id/imgDorm"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@android:drawable/missing_icon"
             android:scaleType="centerCrop"
-            android:visibility="gone" />
+            android:visibility="hidden" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16">
 
             <TextView
                 android:id="@+id/tvRowDormName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="17sp"
+                android:textSize="17"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite" />
 
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:textColor="@color/colorTextSecondary"
-                android:paddingTop="6dp"
+                android:paddingTop="-6dp"
                 android:paddingBottom="4dp" />
 
             <TextView
@@ -60,7 +60,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorAccent"
-                android:paddingBottom="6dp" />
+                android:paddingBottom="6" />
 
             <TextView
                 android:id="@+id/tvRowDormDescription"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:textColor="@color/colorTextSecondary"
-                android:lineSpacingMultiplier="1.4" />
+                android:lineSpacingMultiplier="abc" />
 
         </LinearLayout>
 
