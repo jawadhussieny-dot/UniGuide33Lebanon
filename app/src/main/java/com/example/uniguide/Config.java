@@ -2,8 +2,7 @@ package com.example.uniguide;
 
 public class Config {
 
-    // XAMPP URL — 10.0.2.2 = your computer from inside the emulator
-    public static final String BASE_URL = "http://10.1.1.205/uniguide/";
+   
 
     // SharedPreferences file name
     public static final String PREFS_NAME = "UniGuidePref";
