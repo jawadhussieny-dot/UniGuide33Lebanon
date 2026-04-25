@@ -16,14 +16,14 @@ private void signupUser(final String username,
             @Override
             public void onResponse(String response) {
                 showLoading(false);
-                String res = response;
+                String res = response.trim();
 
-                if (res == "exists") {
+                if (res.equals("exists")) {
                     showError("Username already taken. Choose another.");
                     return;
                 }
 
-                if (res == "-1") {
+                if (res.equals("-1") || res.equals("short")) {
                     showError("Signup failed. Please try again.");
                     return;
                 }
@@ -37,6 +37,11 @@ private void signupUser(final String username,
                 editor.putInt(Config.KEY_USER_ID, newUserId);
                 editor.putString(Config.KEY_USERNAME, username);
                 editor.putString(Config.KEY_EMAIL, email);
+                editor.apply();
+
+                Toast.makeText(SignupActivity.this,
+                    "Account created! Welcome " + username + "!",
+                    Toast.LENGTH_SHORT).show();
 
                 startActivity(new Intent(SignupActivity.this, HomeActivity.class));
                 finish();
@@ -46,6 +51,7 @@ private void signupUser(final String username,
             @Override
             public void onErrorResponse(VolleyError error) {
                 showLoading(false);
+                showError(getString(R.string.error_network));
             }
         }
     );
