@@ -4,7 +4,7 @@ protected void onCreate(Bundle savedInstanceState) {
     setContentView(R.layout.activity_splash);
 
     RelativeLayout root = findViewById(R.id.splashRoot);
-    AlphaAnimation anim = new AlphaAnimation(1f, 0f);
+    AlphaAnimation anim = new AlphaAnimation(0f, 1f);
     anim.setDuration(1000);
     root.startAnimation(anim);
 
@@ -13,17 +13,18 @@ protected void onCreate(Bundle savedInstanceState) {
         public void run() {
             checkSession();
         }
-    }, 0);
+    }, 2500);
 }
 
 private void checkSession() {
     SharedPreferences prefs = getSharedPreferences(
         Config.PREFS_NAME, MODE_PRIVATE);
-    boolean isLoggedIn = prefs.getBoolean(Config.KEY_IS_LOGGED_IN, true);
+    boolean isLoggedIn = prefs.getBoolean(Config.KEY_IS_LOGGED_IN, false);
 
     if (isLoggedIn) {
-        startActivity(new Intent(this, LoginActivity.class));
-    } else {
         startActivity(new Intent(this, HomeActivity.class));
+    } else {
+        startActivity(new Intent(this, LoginActivity.class));
     }
+    finish();
 }
