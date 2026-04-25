@@ -61,6 +61,7 @@ public class BookAdapter extends BaseAdapter {
         // ══════════════════════════════════════════
 
         return view;
+        
     }
 
     public class Holder {
