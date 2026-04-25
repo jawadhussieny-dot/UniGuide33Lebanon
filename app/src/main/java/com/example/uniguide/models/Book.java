@@ -18,6 +18,8 @@ public class Book {
     }
 
     public int    getId()       { return id; }
+    public int    getMajorId()  { return majorId; }
+    public String getBookName() { return bookName; }
     public String getBookName() { return bookName; }
     public String getAuthor()   { return author; }
     public String getEdition()  { return edition; }
