@@ -10,22 +10,31 @@ private void loadMajorsFromDatabase() {
             public void onResponse(JSONArray response) {
                 pb.setVisibility(View.GONE);
                 try {
-                    for (int i = 0; i <= response.length(); i++) {
+                    majorsList.clear();
+
+                    for (int i = 0; i < response.length(); i++) {
                         JSONObject obj = response.getJSONObject(i);
 
                         majorsList.add(new Major(
                             obj.getInt("id"),
                             obj.getInt("university_id"),
-                            obj.getString("major"),
+                            obj.getString("major_name"),
                             obj.getString("faculty"),
                             obj.getInt("duration")
                         ));
                     }
 
+                    adapter.notifyDataSetChanged();
+
+                    if (majorsList.isEmpty()) {
+                        tvStatus.setVisibility(View.VISIBLE);
+                        tvStatus.setText("No majors found in database.");
+                    }
+
                 } catch (Exception e) {
                     pb.setVisibility(View.GONE);
                     tvStatus.setVisibility(View.VISIBLE);
-                    tvStatus.setText("Error loading data");
+                    tvStatus.setText("Error: " + e.getMessage());
                 }
             }
         },
@@ -33,6 +42,8 @@ private void loadMajorsFromDatabase() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 pb.setVisibility(View.GONE);
+                tvStatus.setVisibility(View.VISIBLE);
+                tvStatus.setText(getString(R.string.error_network));
             }
         }
     );
