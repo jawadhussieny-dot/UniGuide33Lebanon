@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <!--
+    IMAGE PLACEHOLDER - BACKGROUND
+    1. Save image as: app/res/drawable/splash_bg.jpg
+    2. Change android:background above to: @drawable/splash_bg
+    -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!--
+        IMAGE PLACEHOLDER - APP LOGO
+        1. Save logo as: app/res/drawable/app_logo.png
+        2. Change src to: @drawable/app_logo
+        3. Remove android:tint line
+        -->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UniGuide Lebanon"
+            android:textColor="@color/colorWhite"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your University Guide"
+            android:textColor="#BBDEFB"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="CSC431 — Mobile Development"
+        android:textColor="#90CAF9"
+        android:textSize="13sp" />
+
+</RelativeLayout>

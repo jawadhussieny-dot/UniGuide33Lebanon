@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UniGuide Lebanon</string>
+    <string name="login">Login</string>
+    <string name="signup">Create Account</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="no_account">Don\'t have an account? Sign Up</string>
+    <string name="have_account">Already have an account? Login</string>
+    <string name="error_network">Cannot reach server. Make sure XAMPP is running.</string>
+    <string name="error_fill_all">Please fill in all fields</string>
+    <string name="error_password_short">Password must be at least 4 characters</string>
+    <string name="logout">Logout</string>
+    <string name="about">About</string>
+    <string name="refresh">Refresh</string>
+    <string name="back">Back</string>
+    <string name="loading">Loading from database...</string>
+</resources>

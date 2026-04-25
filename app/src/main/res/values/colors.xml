@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 🔵 Main Brand (Dark Navy + Gold) -->
+    <color name="colorPrimary">#0A1F44</color>
+    <color name="colorPrimaryDark">#06142E</color>
+    <color name="colorAccent">#D4AF37</color>
+
+    <!-- 🧱 Backgrounds -->
+    <color name="colorBackground">#0A1F44</color>
+    <color name="colorCard">#112B5A</color>
+    <color name="colorInputBg">#1C3A6B</color>
+
+    <!-- 📝 Text -->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTextPrimary">#FFFFFF</color>
+    <color name="colorTextSecondary">#C0C0C0</color>
+
+    <!-- 🔲 Extras -->
+    <color name="colorDivider">#2A4A7B</color>
+    <color name="colorGreen">#4CAF50</color>
+    <color name="colorRed">#E53935</color>
+
+</resources>
