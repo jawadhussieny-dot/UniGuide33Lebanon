@@ -21,7 +21,11 @@ public class UniversityAdapter extends BaseAdapter {
     private List<University> list;
     private LayoutInflater inflater;
 
-    
+    public UniversityAdapter(Context context, List<University> list) {
+        this.context = context;
+        this.list = list;
+        this.inflater = LayoutInflater.from(context);
+    }
 
     public void updateList(List<University> newList) {
         this.list = newList;
