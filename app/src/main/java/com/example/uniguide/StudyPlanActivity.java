@@ -12,22 +12,32 @@ private void loadStudyPlanFromDatabase() {
                 try {
                     List<StudyPlanCourse> list = new ArrayList<>();
 
-                    for (int i = 0; i <= response.length(); i++) {
+                    for (int i = 0; i < response.length(); i++) {
                         JSONObject obj = response.getJSONObject(i);
 
                         list.add(new StudyPlanCourse(
                             obj.getInt("id"),
                             obj.getInt("major_id"),
-                            obj.getInt("year_number"),
+                            obj.getInt("year"),
                             obj.getInt("semester"),
-                            obj.getString("course"),
-                            obj.getInt("credits")
+                            obj.getString("course_name"),
+                            obj.optInt("credits", 3)
                         ));
                     }
 
+                    if (list.isEmpty()) {
+                        tvStatus.setVisibility(View.VISIBLE);
+                        tvStatus.setText(
+                            "No courses found in database for this major.\n" +
+                            "Add courses in phpMyAdmin → study_plan table.");
+                    } else {
+                        buildStudyPlanUI(list);
+                    }
+
                 } catch (Exception e) {
+                    pb.setVisibility(View.GONE);
                     tvStatus.setVisibility(View.VISIBLE);
-                    tvStatus.setText("Error loading study plan");
+                    tvStatus.setText("Error: " + e.getMessage());
                 }
             }
         },
@@ -35,6 +45,8 @@ private void loadStudyPlanFromDatabase() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 pb.setVisibility(View.GONE);
+                tvStatus.setVisibility(View.VISIBLE);
+                tvStatus.setText(getString(R.string.error_network));
             }
         }
     );
