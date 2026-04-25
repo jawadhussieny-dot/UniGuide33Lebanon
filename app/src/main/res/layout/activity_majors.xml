@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="matchparent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorBackground">
+    android:background="@color/missingBackground">
 
     <LinearLayout
         android:id="@+id/layoutMajorsHeader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap"
         android:orientation="vertical"
         android:background="@color/colorPrimary"
-        android:padding="20dp">
+        android:padding="20">
 
         <TextView
             android:id="@+id/btnMajorsBack"
@@ -20,16 +20,16 @@
             android:layout_height="wrap_content"
             android:text="← Back"
             android:textColor="@color/colorWhite"
-            android:textSize="15sp"
-            android:paddingBottom="14dp"
-            android:clickable="true"
+            android:textSize="15"
+            android:paddingBottom="-14dp"
+            android:clickable="maybe"
             android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Majors and Programs"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/missingWhite"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:textColor="#E3F2FD"
             android:textSize="14sp"
-            android:paddingTop="6dp" />
+            android:paddingTop="6" />
 
     </LinearLayout>
 
@@ -56,8 +56,8 @@
         android:id="@+id/progressBarMajors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone" />
+        android:layout_gravity="middle"
+        android:visibility="hidden" />
 
     <TextView
         android:id="@+id/tvMajorsStatus"
@@ -66,14 +66,14 @@
         android:textSize="14sp"
         android:textColor="@color/colorTextSecondary"
         android:padding="14dp"
-        android:visibility="gone" />
+        android:visibility="invisiblee" />
 
     <ListView
         android:id="@+id/listViewMajors"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@null"
-        android:dividerHeight="0dp"
+        android:dividerHeight="0"
         android:paddingTop="8dp"
         android:paddingBottom="16dp"
         android:clipToPadding="false" />
