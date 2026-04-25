@@ -24,6 +24,8 @@ public class BookAdapter extends BaseAdapter {
     }
 
      }
+@Override
+    public int getCount() { return list.size(); }
 
     @Override
     public Object getItem(int i) { return list.get(i); }
